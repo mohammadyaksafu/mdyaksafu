@@ -1,0 +1,96 @@
+{
+  "experience": [
+    {
+      "period": "2026 — Present",
+      "title": "Director of Robotics",
+      "org": "RoboSUST",
+      "desc": "Leading the club's robotics and R&D direction — overseeing project pipelines, mentoring members, and setting technical strategy across embedded systems and software teams."
+    },
+    {
+      "period": "2025 — 2026",
+      "title": "Research & Development Secretary",
+      "org": "RoboSUST",
+      "desc": "Coordinated R&D activities, organized technical sessions, and supported project execution across the club's robotics and AI initiatives."
+    },
+    {
+      "period": "2024 — 2025",
+      "title": "Assistant Research & Development Secretary",
+      "org": "RoboSUST",
+      "desc": "Supported the R&D team on club projects and technical workshops, assisting senior members in planning and delivery."
+    }
+  ],
+  "work": [
+    {
+      "chip": "Web Development",
+      "year": "2026",
+      "title": "Sondhani Somac — Official Website",
+      "org": "Client / Organization Project",
+      "desc": "Designed and developed the official website end-to-end, covering front-end build, content structure, and deployment.",
+      "stack": ["Web Development", "UI/UX", "Deployment"]
+    },
+    {
+      "chip": "AI/ML Datathon",
+      "year": "2026",
+      "title": "DUET AI Hackathon",
+      "org": "DUET",
+      "desc": "Secured 9th place in the Datathon track, working on data analysis and machine learning model development.",
+      "stack": ["Data Analysis", "Machine Learning", "Python"]
+    },
+    {
+      "chip": "Hackathon",
+      "year": "2025",
+      "title": "EWU National Hackathon",
+      "org": "East West University",
+      "desc": "Participated as a finalist, building a full-stack solution under time constraints alongside a cross-functional team.",
+      "stack": ["Full-Stack", "Team Collaboration"]
+    },
+    {
+      "chip": "Hackathon",
+      "year": "2025",
+      "title": "MIST Hackathon",
+      "org": "Military Institute of Science & Technology",
+      "desc": "Competed in the national-level hackathon, contributing to system design and implementation within the team.",
+      "stack": ["System Design", "Rapid Prototyping"]
+    }
+  ],
+  "competitions": [
+    { "chip": "Result",       "label": "Runner-up",                  "title": "AUTO GRAND PRIX V6.0" },
+    { "chip": "Result",       "label": "1st Runner-up",              "title": "Omnistar Business Case Competition" },
+    { "chip": "Result",       "label": "Champion",                   "title": "Leading University — Idea Presentation" },
+    { "chip": "Result",       "label": "Finalist · Special Mention", "title": "Gen Vote Festival — Hackathon" },
+    { "chip": "Result",       "label": "Finalist",                   "title": "EWU National Hackathon" },
+    { "chip": "Result",       "label": "Finalist",                   "title": "IPESphere Project Fair" },
+    { "chip": "Result",       "label": "Selected",                   "title": "Innovation Hub", "meta": "Team project selected for the program" },
+    { "chip": "Participant",  "label": "Participant",                "title": "MIST Hackathon" },
+    { "chip": "Participant",  "label": "Participant",                "title": "NASA Space Apps Challenge 2024" },
+    { "chip": "Participant",  "label": "Participant",                "title": "First Innovator Challenge" }
+  ],
+  "research": [
+    {
+      "chip": "Presenter",
+      "year": "2025",
+      "conf": "ICCIT 2025",
+      "venue": "28th International Conference on Computer and Information Technology — Cox's Bazar, Bangladesh",
+      "papers": [
+        { "title": "\"EquiTea: An IoT–Machine Learning–Blockchain Integrated System for Transparent Wage Payments in the Tea Industry of Bangladesh\"", "detail": null }
+      ]
+    },
+    {
+      "chip": "Contributor",
+      "year": "2025",
+      "conf": "ISTEME 2025",
+      "venue": "3rd International Conference on Science, Technology, Engineering, Mathematics & Education",
+      "papers": [
+        { "title": "ALERTA: Multi-Domain Safety Solution — Alzheimer's, Elderly & Women Protection", "detail": "with Nishat Tarannum Mim, Yuvraj Nabil Rahman & Gazi Amanul Hoque · presented by Gazi Amanul Hoque" },
+        { "title": "EquiTea", "detail": "presented by Tasmia Islam" },
+        { "title": "Development of a Low-Cost PZT and ESP32 Integrated Platform for Breast Tissue Stiffness Assessment", "detail": null }
+      ]
+    }
+  ],
+  "community": [
+    { "chip": "Speaker",     "title": "Robo Talks",                                  "meta": "Organized by RoboSUST" },
+    { "chip": "Instructor",  "title": "RoboSchool",                                  "meta": "Conducted 3 sessions · Organized by RoboSUST" },
+    { "chip": "Organizer",   "title": "Eid Special: Free Python & ML Bootcamp",      "meta": "400+ students trained, free of cost" },
+    { "chip": "Participant", "title": "Research 101 Seminar",                         "meta": "Research methodology · SUST Data Science Club" }
+  ]
+}
