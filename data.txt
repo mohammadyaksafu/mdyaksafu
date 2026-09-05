@@ -20,77 +20,148 @@
     }
   ],
   "work": [
-    {
-      "chip": "Web Development",
-      "year": "2026",
-      "title": "Sondhani Somac — Official Website",
-      "org": "Client / Organization Project",
-      "desc": "Designed and developed the official website end-to-end, covering front-end build, content structure, and deployment.",
-      "stack": ["Web Development", "UI/UX", "Deployment"]
-    },
-    {
-      "chip": "AI/ML Datathon",
-      "year": "2026",
-      "title": "DUET AI Hackathon",
-      "org": "DUET",
-      "desc": "Secured 9th place in the Datathon track, working on data analysis and machine learning model development.",
-      "stack": ["Data Analysis", "Machine Learning", "Python"]
-    },
-    {
-      "chip": "Hackathon",
-      "year": "2025",
-      "title": "EWU National Hackathon",
-      "org": "East West University",
-      "desc": "Participated as a finalist, building a full-stack solution under time constraints alongside a cross-functional team.",
-      "stack": ["Full-Stack", "Team Collaboration"]
-    },
-    {
-      "chip": "Hackathon",
-      "year": "2025",
-      "title": "MIST Hackathon",
-      "org": "Military Institute of Science & Technology",
-      "desc": "Competed in the national-level hackathon, contributing to system design and implementation within the team.",
-      "stack": ["System Design", "Rapid Prototyping"]
-    }
-  ],
-  "competitions": [
-    { "chip": "Result",       "label": "Runner-up",                  "title": "AUTO GRAND PRIX V6.0" },
-    { "chip": "Result",       "label": "1st Runner-up",              "title": "Omnistar Business Case Competition" },
-    { "chip": "Result",       "label": "Champion",                   "title": "Leading University — Idea Presentation" },
-    { "chip": "Result",       "label": "Finalist · Special Mention", "title": "Gen Vote Festival — Hackathon" },
-    { "chip": "Result",       "label": "Finalist",                   "title": "EWU National Hackathon" },
-    { "chip": "Result",       "label": "Finalist",                   "title": "IPESphere Project Fair" },
-    { "chip": "Result",       "label": "Selected",                   "title": "Innovation Hub", "meta": "Team project selected for the program" },
-    { "chip": "Participant",  "label": "Participant",                "title": "MIST Hackathon" },
-    { "chip": "Participant",  "label": "Participant",                "title": "NASA Space Apps Challenge 2024" },
-    { "chip": "Participant",  "label": "Participant",                "title": "First Innovator Challenge" }
-  ],
+  {
+    "chip": "Web Development",
+    "year": "2026",
+    "title": "Sondhani Somac — Official Website",
+    "org": "Client / Organization Project",
+    "desc": "Designed and developed the official website end-to-end, covering front-end build, content structure, and deployment.",
+    "stack": ["Web Development", "UI/UX", "Deployment"]
+  },
+  {
+    "chip": "AI/ML Datathon",
+    "year": "2026",
+    "title": "DUET AI Hackathon",
+    "org": "DUET",
+    "desc": "Secured 9th place in the Datathon track, working on data analysis and machine learning model development.",
+    "stack": ["Data Analysis", "Machine Learning", "Python"]
+  },
+  {
+    "chip": "AI/ML Challenge",
+    "year": "2026",
+    "title": "অলীকবচন — Bengali LLM Hallucination Detection Challenge",
+    "org": "AI/ML Challenge",
+    "desc": "Participated in the Bengali LLM Hallucination Detection Challenge, focusing on detecting hallucinations in Bengali language model outputs. Secured 84th position.",
+    "stack": ["LLM", "NLP", "Hallucination Detection", "Python"]
+  },
+  {
+    "chip": "AI Hackathon",
+    "year": "2026",
+    "title": "Nascenia AI Hackathon",
+    "org": "Nascenia",
+    "desc": "Competed in the Nascenia AI Hackathon, contributing to the development of an AI-driven solution and securing 80th position.",
+    "stack": ["Artificial Intelligence", "Machine Learning", "Python"]
+  },
+  {
+    "chip": "Datathon",
+    "year": "2026",
+    "title": "PSTU DataThon 2026",
+    "org": "PSTU",
+    "desc": "Participated in PSTU DataThon 2026, working on data analysis and machine learning-based problem solving. Secured 25th position.",
+    "stack": ["Data Analysis", "Machine Learning", "Python"]
+  },
+  {
+    "chip": "Hackathon",
+    "year": "2025",
+    "title": "EWU National Hackathon",
+    "org": "East West University",
+    "desc": "Participated as a finalist, building a full-stack solution under time constraints alongside a cross-functional team.",
+    "stack": ["Full-Stack", "Team Collaboration"]
+  },
+  {
+    "chip": "Hackathon",
+    "year": "2025",
+    "title": "MIST Hackathon",
+    "org": "Military Institute of Science & Technology",
+    "desc": "Competed in the national-level hackathon, contributing to system design and implementation within the team.",
+    "stack": ["System Design", "Rapid Prototyping"]
+  }
+],
+ "competitions": [
+  { "chip": "Result",       "label": "Runner-up",                  "title": "AUTO GRAND PRIX V6.0" },
+  { "chip": "Result",       "label": "1st Runner-up",              "title": "Omnistar Business Case Competition" },
+  { "chip": "Result",       "label": "Champion",                   "title": "Leading University — Idea Presentation" },
+  { "chip": "Result",       "label": "Finalist · Special Mention", "title": "Gen Vote Festival — Hackathon" },
+  { "chip": "Result",       "label": "Finalist",                   "title": "EWU National Hackathon" },
+  { "chip": "Result",       "label": "Finalist",                   "title": "IPESphere Project Fair" },
+  { "chip": "Result",       "label": "Selected · Top 50 Teams",    "title": "PUST Hackathon" },
+  { "chip": "Result",       "label": "Selected · 1st Round",       "title": "Therap Java Fest" },
+  { "chip": "Result",       "label": "Selected",                   "title": "Innovation Hub", "meta": "Team project selected for the program" },
+  { "chip": "Participant",  "label": "Participant",                "title": "MIST Hackathon" },
+  { "chip": "Participant",  "label": "Participant",                "title": "NASA Space Apps Challenge 2024" },
+  { "chip": "Participant",  "label": "Participant",                "title": "First Innovator Challenge" }
+],
   "research": [
-    {
-      "chip": "Presenter",
-      "year": "2025",
-      "conf": "ICCIT 2025",
-      "venue": "28th International Conference on Computer and Information Technology — Cox's Bazar, Bangladesh",
-      "papers": [
-        { "title": "\"EquiTea: An IoT–Machine Learning–Blockchain Integrated System for Transparent Wage Payments in the Tea Industry of Bangladesh\"", "detail": null }
-      ]
-    },
-    {
-      "chip": "Contributor",
-      "year": "2025",
-      "conf": "ISTEME 2025",
-      "venue": "3rd International Conference on Science, Technology, Engineering, Mathematics & Education",
-      "papers": [
-        { "title": "ALERTA: Multi-Domain Safety Solution — Alzheimer's, Elderly & Women Protection", "detail": "with Nishat Tarannum Mim, Yuvraj Nabil Rahman & Gazi Amanul Hoque · presented by Gazi Amanul Hoque" },
-        { "title": "EquiTea", "detail": "presented by Tasmia Islam" },
-        { "title": "Development of a Low-Cost PZT and ESP32 Integrated Platform for Breast Tissue Stiffness Assessment", "detail": null }
-      ]
-    }
-  ],
+  {
+    "chip": "Presenter",
+    "year": "2025",
+    "conf": "ICCIT 2025",
+    "venue": "28th International Conference on Computer and Information Technology — Cox's Bazar, Bangladesh",
+    "papers": [
+      {
+        "title": "\"EquiTea: An IoT–Machine Learning–Blockchain Integrated System for Transparent Wage Payments in the Tea Industry of Bangladesh\"",
+        "detail": null
+      }
+    ]
+  },
+  {
+    "chip": "Contributor",
+    "year": "2025",
+    "conf": "ISTEME 2025",
+    "venue": "3rd International Conference on Science, Technology, Engineering, Mathematics & Education",
+    "papers": [
+      {
+        "title": "ALERTA: Multi-Domain Safety Solution — Alzheimer's, Elderly & Women Protection",
+        "detail": "with Nishat Tarannum Mim, Yuvraj Nabil Rahman & Gazi Amanul Hoque · presented by Gazi Amanul Hoque"
+      },
+      {
+        "title": "EquiTea",
+        "detail": "presented by Tasmia Islam"
+      },
+      {
+        "title": "Development of a Low-Cost PZT and ESP32 Integrated Platform for Breast Tissue Stiffness Assessment",
+        "detail": null
+      }
+    ]
+  },
+  {
+    "chip": "Accepted",
+    "year": "2026",
+    "conf": "COMPAS 2026",
+    "venue": "3rd IEEE International Conference on Computing, Applications and Systems",
+    "papers": [
+      {
+        "title": "An Empirical Study of Detecting AI-Generated Text",
+        "detail": "Paper ID 147 · Accepted for presentation"
+      }
+    ]
+  }
+],
   "community": [
-    { "chip": "Speaker",     "title": "Robo Talks",                                  "meta": "Organized by RoboSUST" },
-    { "chip": "Instructor",  "title": "RoboSchool",                                  "meta": "Conducted 3 sessions · Organized by RoboSUST" },
-    { "chip": "Organizer",   "title": "Eid Special: Free Python & ML Bootcamp",      "meta": "400+ students trained, free of cost" },
-    { "chip": "Participant", "title": "Research 101 Seminar",                         "meta": "Research methodology · SUST Data Science Club" }
-  ]
+  {
+    "chip": "Speaker",
+    "title": "Robo Talks",
+    "meta": "Organized by RoboSUST"
+  },
+  {
+    "chip": "Instructor",
+    "title": "RoboSchool",
+    "meta": "Conducted 3 sessions · Organized by RoboSUST"
+  },
+  {
+    "chip": "Organizer",
+    "title": "Eid Special: Free Python & ML Bootcamp",
+    "meta": "400+ students trained, free of cost"
+  },
+  {
+    "chip": "Mentor",
+    "title": "RoboSUST LFR",
+    "meta": "Mentor for Line Following Robot team/project · RoboSUST"
+  },
+  {
+    "chip": "Instructor",
+    "title": "8-Day Machine Learning Workshop",
+    "meta": "Conducted an 8-day ML workshop covering Python, data preprocessing, regression, classification, ensemble learning, SVM, clustering & model evaluation · Organized by RoboSUST"
+  }
+]
 }
