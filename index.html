@@ -6,15 +6,22 @@
 <title>Md Yak Safu — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 
+<div class="bg-fx" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+</div>
+<div class="progress" aria-hidden="true"></div>
+
 <header class="nav">
   <div class="nav-inner">
-    <span class="wordmark">Md Yak<span class="dot"></span>Safu</span>
+    <a href="#top" class="wordmark">Md Yak<span class="dot"></span>Safu</a>
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
@@ -30,9 +37,17 @@
   <section class="hero reveal" id="top">
     <div class="hero-top reveal">
       <div class="hero-copy">
-        <h1>Md Yak Safu</h1>
+        <p class="hero-badge"><span class="pulse" aria-hidden="true"></span>Software Engineering · Robotics · AI/ML</p>
+        <h1>Md Yak <em>Safu</em></h1>
         <p class="role"><span>4th-Year Software Engineering Student, SUST</span><span class="sep">/</span><span>Director of Robotics — RoboSUST</span></p>
         <p class="tagline">Building across robotics, full-stack systems and applied machine learning — and writing up the research along the way.</p>
+
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#work">View my work
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-outline" href="#contact">Get in touch</a>
+        </div>
 
         <div class="contact-row">
           <a href="tel:+8801642468704">
@@ -221,7 +236,7 @@
     <div class="legend">
       <span class="legend-item"><span class="legend-dot clay"></span>Result</span>
       <span class="legend-item"><span class="legend-dot sage"></span>Research</span>
-      <span class="legend-item"><span class="legend-dot sage"></span>Community</span>
+      <span class="legend-item"><span class="legend-dot violet"></span>Community</span>
       <span class="legend-item"><span class="legend-dot stone"></span>Participant</span>
     </div>
 
@@ -351,7 +366,7 @@
 <footer class="contact reveal" id="contact">
   <div class="container">
     <p class="eyebrow">Contact</p>
-    <h2 class="display">Let's build something.</h2>
+    <h2 class="display">Let's build <em>something.</em></h2>
     <p class="contact-text">More of the code and the competitive-programming track record live here.</p>
     <div class="contact-links">
       <a href="tel:+8801642468704">+880 1642-468704</a>
@@ -431,6 +446,82 @@
     });
   }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
   document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+})();
+
+/* Ambient interactions: floating nav, scroll progress, active section,
+   cursor spotlight on cards, staggered children, stat count-up. */
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var nav = document.querySelector(".nav");
+  var root = document.documentElement;
+
+  function onScroll(){
+    var max = root.scrollHeight - window.innerHeight;
+    root.style.setProperty("--progress", max > 0 ? (window.scrollY / max).toFixed(4) : 0);
+    nav.classList.toggle("scrolled", window.scrollY > 20);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // Highlight the nav link for the section currently in view
+  var links = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  if ("IntersectionObserver" in window){
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        links.forEach(function(a){ a.classList.toggle("active", a.getAttribute("href") === "#" + e.target.id); });
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    links.forEach(function(a){
+      var t = document.querySelector(a.getAttribute("href"));
+      if (t) spy.observe(t);
+    });
+  }
+
+  // Cursor spotlight — delegated so it also covers cards rendered from data.txt
+  document.addEventListener("pointermove", function(e){
+    var card = e.target.closest && e.target.closest(".card, .work-card");
+    if (!card) return;
+    var r = card.getBoundingClientRect();
+    card.style.setProperty("--mx", (e.clientX - r.left) + "px");
+    card.style.setProperty("--my", (e.clientY - r.top) + "px");
+  });
+
+  // Stagger index for grid children (re-run when lists are re-rendered)
+  function indexChildren(){
+    document.querySelectorAll(".timeline, .work-grid, .grid-cards, .focus-tags").forEach(function(list){
+      Array.prototype.forEach.call(list.children, function(c, i){ c.style.setProperty("--i", i); });
+    });
+  }
+  indexChildren();
+  if ("MutationObserver" in window){
+    var mo = new MutationObserver(indexChildren);
+    document.querySelectorAll(".timeline, .work-grid, .grid-cards").forEach(function(l){ mo.observe(l, { childList: true }); });
+  }
+
+  // Count-up for numeric stats
+  var stats = document.querySelector(".stats");
+  if (stats && !reduce && "IntersectionObserver" in window){
+    var so = new IntersectionObserver(function(entries){
+      if (!entries[0].isIntersecting) return;
+      so.disconnect();
+      stats.querySelectorAll(".stat-num").forEach(function(el){
+        var m = el.textContent.trim().match(/^(\d+)(\D*)$/);
+        if (!m) return;
+        var end = parseInt(m[1], 10), suffix = m[2], start = null, dur = 1600;
+        function step(ts){
+          if (start === null) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 4);
+          el.textContent = Math.round(end * eased) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.4 });
+    so.observe(stats);
+  }
 })();
 </script>
 
