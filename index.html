@@ -25,7 +25,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="#top" class="wordmark">Md Yak<span class="dot"></span>Safu</a>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#highlights">Wins</a>
       <a href="#experience">Experience</a>
@@ -33,9 +33,29 @@
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cv" href="./Md%20Yak%20Safu.pdf" download="Md Yak Safu - CV.pdf" aria-label="Download CV"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span>CV</span></a>
+    <div class="nav-actions">
+      <a class="nav-cv" href="./Md%20Yak%20Safu.pdf" download="Md Yak Safu - CV.pdf" aria-label="Download CV"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg><span>CV</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav class="mobile-links" aria-label="Mobile">
+    <a href="#about"><span class="mm-num">01</span>About</a>
+    <a href="#highlights"><span class="mm-num">02</span>Wins</a>
+    <a href="#experience"><span class="mm-num">03</span>Experience</a>
+    <a href="#work"><span class="mm-num">04</span>Work</a>
+    <a href="#achievements"><span class="mm-num">05</span>Achievements</a>
+    <a href="#contact"><span class="mm-num">06</span>Contact</a>
+  </nav>
+  <div class="mobile-foot">
+    <a class="btn btn-gold" href="./Md%20Yak%20Safu.pdf" download="Md Yak Safu - CV.pdf">Download CV <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></a>
+    <p class="mobile-contact"><a href="mailto:mohammadyaksafu@gmail.com">mohammadyaksafu@gmail.com</a><a href="tel:+8801642468704">+880 1642-468704</a></p>
+  </div>
+</div>
 
 <main>
 
@@ -963,7 +983,7 @@
 
   /* ----- Collect edits back into data ----- */
   function collectEdits(){
-    const $ = sel => document.querySelector(sel);
+    const $ = (sel, ctx) => (ctx || document).querySelector(sel);
     const $$ = sel => Array.from(document.querySelectorAll(sel));
 
     // Experience
@@ -1365,6 +1385,36 @@
       btn.style.transform = "translate(" + (dx * 0.18).toFixed(1) + "px," + (dy * 0.28).toFixed(1) + "px)";
     });
     btn.addEventListener("pointerleave", function(){ btn.style.transform = ""; });
+  });
+})();
+
+/* ============================================================
+   Mobile menu — full-screen overlay toggled by the burger
+   ============================================================ */
+(function(){
+  "use strict";
+  var toggle = document.querySelector(".nav-toggle");
+  var menu   = document.getElementById("mobile-menu");
+  if (!toggle || !menu) return;
+
+  function setOpen(open){
+    document.documentElement.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    menu.setAttribute("aria-hidden", open ? "false" : "true");
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  toggle.addEventListener("click", function(){
+    setOpen(!document.documentElement.classList.contains("menu-open"));
+  });
+  menu.addEventListener("click", function(e){
+    if (e.target.closest("a")) setOpen(false);
+  });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape" && document.documentElement.classList.contains("menu-open")) setOpen(false);
+  });
+  window.matchMedia("(min-width: 861px)").addEventListener("change", function(m){
+    if (m.matches) setOpen(false);
   });
 })();
 </script>
