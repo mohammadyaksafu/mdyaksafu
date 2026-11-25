@@ -120,8 +120,8 @@
     {
       "chip": "Hackathon",
       "year": "2025",
-      "title": "MIST Hackathon",
-      "org": "Military Institute of Science & Technology",
+      "title": "BUP Hackathon",
+      "org": "Bangladesh University of Professionals",
       "desc": "Secured 8th place in the national-level hackathon, contributing to system design and implementation within the team.",
       "stack": [
         "System Design",
@@ -190,7 +190,7 @@
     {
       "chip": "Result",
       "label": "8th Place",
-      "title": "MIST Hackathon"
+      "title": "BUP Hackathon"
     },
     {
       "chip": "Participant",
